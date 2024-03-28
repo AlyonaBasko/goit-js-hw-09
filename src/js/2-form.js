@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
      
       const formData = JSON.stringify({
-        ...savedData,
+        ...savedData ?? {},
         [name]: trimmedValue
       });
       localStorage.setItem("feedback-form-state", formData);
