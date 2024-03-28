@@ -2,8 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector(".feedback-form");
     const savedData = JSON.parse(localStorage.getItem("feedback-form-state"));
     if (savedData) {
-      form.email.value = savedData.email;
-      form.message.value = savedData.message;
+      if (savedData.email !== undefined) {
+        form.email.value = savedData.email;
+      }
+      if (savedData.message !== undefined) {
+        form.message.value = savedData.message;
+      }
     }
 
     form.addEventListener("input", function(event) {
