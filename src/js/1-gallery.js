@@ -75,10 +75,10 @@ images.forEach(image => {
   const galleryItem = document.createElement("li");
   galleryItem.classList.add("gallery-item");
 
-  const galleryLink = document.createElement("a");
+   const galleryLink = document.createElement("a");
   galleryLink.classList.add("gallery-link");
-  galleryLink.href = image.original;
-  galleryLink.setAttribute("target", "_blank");
+   galleryLink.href = image.original;
+  
 
   const galleryImage = document.createElement("img");
   galleryImage.classList.add("gallery-image");
@@ -96,4 +96,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250
 });
 
-console.log(lightbox);
